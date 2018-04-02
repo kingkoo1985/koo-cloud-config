@@ -4,8 +4,8 @@ spring:
   rabbitmq:
     host: cloud-rabbitmq
     port: 5672
-    username: root
-    password: root
+    username: root1
+    password: root1
     virtual-host: /
   datasource:
     schema: classpath:/zipkin.sql
