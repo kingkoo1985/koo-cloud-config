@@ -111,3 +111,6 @@ paascloud:
     qrCode:
       pcPath: E:/File/alipay/QRCode
       qiniuPath: alipay/QRCode/
+
+
+
