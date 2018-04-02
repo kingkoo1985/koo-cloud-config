@@ -2,19 +2,19 @@ spring:
   profiles:
     active: dev
   rabbitmq:
-    host:  paascloud-mq-rabbit
-    port: 5672
-    username: root
-    password: root
+      port: 5672
+      hostname: cloud-rabbitmq
+      username: root
+      password: root  
   redis:
-    host: paascloud-db-redis
+    host: cloud-redis
     password: 123456
     port: 6379
     timeout: 0
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: root
     type: com.alibaba.druid.pool.DruidDataSource
     initial-size: 10
     min-idle: 10
@@ -23,68 +23,36 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@paascloud-eureka:8761/eureka/
-paascloud:
-  server:
+      defaultZone: http://cloud-eureka:8761/eureka/
+koocloud:
+  server:    
     eureka:
       port: 8761
-      hostname: paascloud-eureka
-      serviceUrl: http://root:root@paascloud-eureka:8761/eureka/
+      hostname: cloud-eureka
+      serviceUrl: http://cloud-eureka:8761/eureka/
     discovery:
-      port: 8080
-      hostname: paascloud-discovery
-      serviceUrl: http://admin:admin@paascloud-discovery:8080
-    gateway:
-      port: 80
-      hostname: paascloud-gateway
+      port: 8800
+      hostname: cloud-config
+      serviceUrl: http://cloud-config:8800    
     monitor:
-      port: 8010
-      hostname: paascloud-monitor
-      serviceUrl: http://paascloud-monitor:8010
+      port: 8810
+      hostname: cloud-monitor
+      serviceUrl: http://cloud-monitor:8810
     zipkin:
-      port: 8020
-      hostname: paascloud-zipkin
-      serviceUrl: http://paascloud-zipkin:8020
+      port: 8820
+      hostname: cloud-zipkin
+      serviceUrl: http://cloud-zipkin:8820
+    gateway:
+      port: 8860
+      hostname: http://cloud-gateway:8860
     provider:
-      ehc:
-        port: 8040
-        hostname: paascloud-provider-ehc
-      mdc:
-        port: 8030
-        hostname: paascloud-provider-mdc
-      omc:
-        port: 8050
-        hostname: paascloud-provider-omc
-      opc:
-        port: 8070
-        hostname: paascloud-provider-opc
-      ptc:
-        port: 8060
-        hostname: paascloud-provider-ptc
       uac:
-        port: 8000
-        hostname: paascloud-provider-uac
-    web:
-      mall:
-        port: 9000
-        hostname: paascloud-web-mall
+        port: 801
+        hostname: cloud-uac    
   auth:
     jwt:
       expiredRemainMinutes: 20
       expiredMinutes: 120
-  mail:
-    host: smtp.sina.com
-    username: root
-    password: root
-    test-connection: true
-    properties:
-      mail:
-        smtp:
-          auth: true
-          timeout: 2500
-          starttls:
-            enable: true
-            required: true
 
 
 
