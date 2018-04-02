@@ -32,18 +32,5 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 90 # 如果现在超过了5秒的间隔（默认是90秒）
-    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}  # 在信息列表时显示主机名称
+    instance-id: cloud-zipkin  # 在信息列表时显示主机名称
     prefer-ip-address: true     # 访问的路径变为IP地址        
-info:
-  owner: kingkoo1985@gmail.com
-  version: $project.verson$     
-  app.name: koo-cloud
-  company.name: koo-cloud-company
-  build.artifactId: $project.artifactId$
-  build.version: $project.verson$     
-#logging 配置信息
-logging:
-  level:
-    root: info
-  path: logs/
-  file: ${spring.application.name}.log 
