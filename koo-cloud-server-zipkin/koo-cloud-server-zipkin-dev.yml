@@ -1,8 +1,6 @@
 spring:  
   application:
     name: koo-cloud-server-zipkin
-  profiles:
-    active: dev
   rabbitmq:
     host: cloud-rabbitmq
     port: 5672
