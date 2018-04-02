@@ -1,8 +1,6 @@
 server:
   port: 8820
 spring:
-  application:
-    name: koo-cloud-server-zipkin  
   cloud:
     config:
       name: koo-cloud-server-zipkin
