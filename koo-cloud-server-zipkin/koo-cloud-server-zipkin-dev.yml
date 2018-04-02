@@ -1,24 +1,46 @@
+server:
+  port: 8820
 spring:
-  rabbitmq:
-    host: rabbitmq-server
-    port: 5672
-    username: root
-    password: root
-    virtual-host: /
-  datasource:
-    schema: classpath:/zipkin.sql
-    url: jdbc:mysql://mysql-server:3306/zipkin?autoReconnect=true&useSSL=false
-    username: root
-    password: root
-    driver-class-name: org.gjt.mm.mysql.Driver
-    initialize: true
-    continueOnError: true
-  sleuth:
-    enabled: false
-  zipkin:
-    locator:
-      discovery:
-        enabled: true  
-zipkin:
-  storage:  # 设置zipkin收集的信息通过mysql进行存储
-    type: mysql
+  application:
+    name: koo-cloud-server-zipkin  
+  cloud:
+    config:
+      name: koo-cloud-server-zipkin
+      profile: dev
+      label: koo-cloud-server-zipkin
+      uri: http://cloud-config:8800               #多个直接用逗号连接 http://root:root@cloud-config:8800
+      enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://cloud-eureka:8761/eureka  
+  instance:
+    lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 90 # 如果现在超过了5秒的间隔（默认是90秒）
+    instance-id: cloud-gateway-701.com  # 在信息列表时显示主机名称
+    prefer-ip-address: true     # 访问的路径变为IP地址  
+  
+#  rabbitmq:
+#    host: cloud-rabbitmq
+#    port: 5672
+#    username: root
+#    password: root
+#    virtual-host: /
+#  datasource:
+#    schema: classpath:/zipkin.sql
+#    url: jdbc:mysql://cloud-mysql:3306/zipkin?autoReconnect=true&useSSL=false
+#    username: root
+#    password: root
+#    driver-class-name: org.gjt.mm.mysql.Driver
+#    initialize: true
+#    continueOnError: true
+#  sleuth:
+#    enabled: false
+#  zipkin:
+#    locator:
+#      discovery:
+#        enabled: true
+#
+#zipkin:
+#  storage:  # 设置zipkin收集的信息通过mysql进行存储
+#    type: mysql
