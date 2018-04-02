@@ -1,13 +1,5 @@
 server:
   port: 8820
-spring:
-  cloud:
-    config:
-      name: koo-cloud-server-zipkin
-      profile: dev
-      label: koo-cloud-server-zipkin
-      uri: http://cloud-config:8800               #多个直接用逗号连接 http://root:root@cloud-config:8800
-      enabled: true
 eureka:
   client:
     serviceUrl:
