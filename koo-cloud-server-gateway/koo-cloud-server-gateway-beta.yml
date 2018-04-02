@@ -24,7 +24,7 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 90 # 如果现在超过了5秒的间隔（默认是90秒）
-    instance-id: cloud-gateway-701.com  # 在信息列表时显示主机名称
+    instance-id: cloud-gateway  # 在信息列表时显示主机名称
     prefer-ip-address: true     # 访问的路径变为IP地址  
 zuul:     
   ignoredServices: '*'
