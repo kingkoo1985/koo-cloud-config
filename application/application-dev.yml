@@ -4,8 +4,8 @@ spring:
   rabbitmq:
     host:  paascloud-mq-rabbit
     port: 5672
-    username: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-    password: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
+    username: root
+    password: root
   redis:
     host: paascloud-db-redis
     password: 123456
@@ -74,8 +74,8 @@ paascloud:
       expiredMinutes: 120
   mail:
     host: smtp.sina.com
-    username: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-    password: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
+    username: root
+    password: root
     test-connection: true
     properties:
       mail:
@@ -85,32 +85,6 @@ paascloud:
           starttls:
             enable: true
             required: true
-  aliyun:
-    key:
-      accessKeyId: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-      accessKeySecret: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-    rocketMq:
-      namesrvAddr: paascloud-mq-rocket:9876
-    sms:
-      signName: "快乐学习网"
-      regionId: cn-beijing
-      endpoint:
-      endpointName: cn-beijing
-      product: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-      domain: dysmsapi.aliyuncs.com
-  qiniu:
-    key:
-      accessKey: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-      secretKey: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-    oss:
-      privateHost: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-      publicHost: '{cipher}AQA7u26JNrD0HwL9I0AVyPHAxVhqMlphW4vjGjhW+V0qoTliek9Pb1xdfbIGhzGtVOPfyFg1x3IU84wgurS9WZycFLu35W36hMC/ZayvWUGXzcSQMJqBw7sGz0hSG3thJyN4/cYRGjhmuF0FaxIqSBCxxSVav/rpVyCLXlQu4Yr3dKmcyTnQBgVMcJ1573mxkOv59ItjiyQM+wZ2rBupKlcjEml30i+xGdNKZVHektuffzIjSSWMwfgd5vSb0eLuW9m55mR0lnFxVhhZobctUWKTtF6RUidJsjexLaioMjPGMS0txpHP57Gq2NVkgbi7HsHK8iTPQg2LJ2C4kFoqKmgzvzrsZEhCb9VyNVJ5+JNoZJYfIGyimxokpBhR/glILbA='
-  alipay:
-    callback:
-      url: http://dev-api.paascloud.net/omc/pay/alipayCallback
-    qrCode:
-      pcPath: E:/File/alipay/QRCode
-      qiniuPath: alipay/QRCode/
 
 
 
